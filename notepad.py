@@ -3,8 +3,11 @@ from tkinter import ttk, filedialog, messagebox
 import os
 from shared import lang_import,dynamic_import
 
-#if not dynamic_import():
-#    raise ImportError("Cannot found lib 'dynamics'. Are you installed it?")
+if not dynamic_import():
+    if lang_import()=="zh_cn":
+        print("> 标准库系列“dynamic”未找到。")
+    else:
+        print("> Standard library 'dynamic' is not found.")
 
 class Notepad(tk.Tk):
     def __init__(self):
