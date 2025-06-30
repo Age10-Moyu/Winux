@@ -48,6 +48,7 @@ from time import sleep,perf_counter,time
 from random import randint,seed,choice
 from os import system,getlogin
 from socket import gethostname
+from shared import notepad_import as notepad
 class gdoa:
     @staticmethod
     def ide(restart):
@@ -379,6 +380,18 @@ while True:
                 print("} 执行了 "+command+"：命令成功完成：来自 "+user+" 账户。"+"\n> 命令成功完成：命令成功完成。\n> 这是一个无法识别的网络域。")
             else:
                 print("} Running command "+command+": Command running complete: From "+user+".\n> Command running complete: Command running complete.\n> This is an unrecognized online domain.")
+    elif "pc notepad" in command and "/command:yes" in command:
+        if notepad:
+            if lang=="zh_cn":
+                print("} 执行了 "+command+"：来自 "+user+" 账户。\n> 命令成功完成：命令成功完成。")
+            else:
+                print("} Running command "+command+": From "+user+".\n> Command running complete: Command running complete.")
+            import notepad
+        else:
+            if lang=="zh_cn":
+                print("} 执行了 "+command+"：来自 "+user+" 账户。\n> 命令成功完成：找不到应用程序。")
+            else:
+                print("} Running command "+command+": From "+user+".\n> Command running complete: Cannot found the application(s).")
     elif "sudo" in command and r" /active:yes " not in command:
         if lang=="zh_cn":
             print("} 执行了 "+command+r"：不能在没有/active₁时执行sudo：来自 "+user+" 账户。"+"\n> 命令成功完成：语法错误。")
