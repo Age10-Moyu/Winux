@@ -13,9 +13,12 @@
     },
     "config": {
         "app": "/__init__.py",
-        "apps": [], // Not applicable without git=True
-        "dirs": [], // Not applicable with gitignore=True
-        "git": false,
+        "apps": [
+            "/__main__.py",
+            "/__init__.py",
+        ],
+        "dirs": [],
+        "git": true,
         "gitignore": true
     },
     "debug": true
