@@ -13,7 +13,7 @@ _sudo_  `group`  `command`  /value:[ yes | no | \{"`text`"} ]  _/active:[ yes | 
 - `command`：必填。需要执行的命令名称。  
 需要手动填写。  
 - /value：必填。规定了传递给 Winux 的附加值。  
-当跟随的值是\{"`text`"}时，需要手动填写[^1]。  
+当跟随的值是\{"`text`"}时，需要手动填写。  
 - _/active<sub>1</sub>_：选填。证明此命令以开发者权限运行，通常与 _sudo_ 搭配使用。
 - _[ from | by ] `username`_：选填。规定以什么用户的名义执行此命令。默认为当前登录的账户。  
 `username`需要手动填写。  
