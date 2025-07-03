@@ -2,8 +2,8 @@ __pycache__/
 .DS_Store
 .venv/
 todo.py
-/resource/public/innosetup/*
-/resource/home/user/*
+/resource/public/innosetup/
+/resource/home/user/
 /resource/special/profile/settings.code-profile
 /resource/special/profile/github-recovery-codes.txt
 /resource/special/text/start.*
