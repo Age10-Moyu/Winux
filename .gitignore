@@ -2,3 +2,11 @@ __pycache__/
 .DS_Store
 .venv/
 todo.py
+/resource/home/user/*
+/resource/special/profile/settings.code-profile
+/resource/special/text/start.*
+/resource/special/text/start_*.*
+/resource/special/text/finish.*
+/resource/special/text/finish_*.*
+/resource/special/text/uninist.*
+/resource/special/text/uninist_*.*
