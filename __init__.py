@@ -49,6 +49,7 @@ from random import randint,seed,choice
 from os import system,getlogin
 from socket import gethostname
 from shared import notepad_import as notepad
+import file as file_module
 class gdoa:
     @staticmethod
     def ide(restart):
@@ -246,6 +247,14 @@ while True:
             print("} 没有执行命令：输入的字符串没有值：来自 "+user+" 账户。\n> 命令成功完成：不支持空命令。")
         else:
             print("} No running command: type in str no value.: From "+user+".\n> Command running complete: No allow empty commands.")
+#    elif command.strip().lower().startswith("dir"):
+#        args = command.strip().split(maxsplit=1)
+#        path = args[1] if len(args) > 1 else "."
+#        file_module.file_dir(path)
+#    elif command.strip().lower().startswith("ls"):
+#        args = command.strip().split(maxsplit=1)
+#        path = args[1] if len(args) > 1 else "."
+#        file_module.file_ls(path)
     elif ("pc install" in command) and ("/command:yes" in command):
         if '/value:{"ubuntu"}' in command:
             git.install("ubuntu")
