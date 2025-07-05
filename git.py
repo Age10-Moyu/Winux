@@ -94,6 +94,9 @@ def install(package=None,use_uac=True):
             print("} Running command "+command+": From "+user+".\n> Command running complete: Command running complete.")
         print("> ERROR: Cannot install any packages in pythonw.exe.\n> Try to running in python.exe?")
     else:
+        del shared.command_import,command
+        from shared import command_import
+        command=command_import()
         if "--rootin" in command or "--system" in command or not use_uac:
             if package=="ubuntu":
                 if lang=="zh_cn":

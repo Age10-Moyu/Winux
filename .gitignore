@@ -1,6 +1,8 @@
 __pycache__/
-.DS_Store
+.java/
 .venv/
+.vscode/
+.DS_Store
 todo.py
 /resource/public/innosetup/
 /resource/home/user/

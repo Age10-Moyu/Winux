@@ -5,7 +5,7 @@ user=shared.user_import()
 command=shared.command_import()
 
 class about:
-    __init__ = "The main program, Winux's root"
+    __init__ = "The main program, Winux's root" # type: ignore
     __main__ = "Winux runner, running this program to start Winux"
     kl = "Keyboard locker, protect the main process"
     web = "Internet pinger"
