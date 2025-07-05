@@ -8,8 +8,8 @@
     "profile": "/todo.py",
     "info": {
         "app_name": "Winux",
-        "ver": "2025062107",
-        "version": "Winux-rd_2025062107"
+        "ver": "2025070513",
+        "version": "Winux-rd_2025070513"
     },
     "config": {
         "app": "/__init__.py",
@@ -19,7 +19,12 @@
         ],
         "dirs": [],
         "git": true,
-        "gitignore": true
+        "gitignore": true,
+        "enable_api": true,
+        "api": false,
+        // Cannot show the API key with {"gitignore": true}
+        "apis": false
+        // Cannot show the API keys with {"gitignore": true}
     },
     "debug": true
 }
