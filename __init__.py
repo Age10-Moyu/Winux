@@ -36,11 +36,11 @@ Unauthorized distribution, open sourcing, transfer, rental, sale, or lending con
 ----} 为回报命令内容，如命令执行提示等
 ----] 为一般输入，如命令等
 """
-#最后编辑于2025年6月30日（我！放！暑！假！了！！！）
-#Last edited on June 30 2025(I AM ON SUMMER VACATION!!! WOOOOOOOOOO!!!)
+#最后编辑于2025年7月5日
+#Last edited on July 5 2025
 "================= 分界线|Demarcation Line ================="
 #SourceCode
-import sys,special,git,shared
+import sys,special,git,shared,re,os
 from web import connect as web
 from shell import __init__ as shell
 from sys import version_info as ver
@@ -247,14 +247,76 @@ while True:
             print("} 没有执行命令：输入的字符串没有值：来自 "+user+" 账户。\n> 命令成功完成：不支持空命令。")
         else:
             print("} No running command: type in str no value.: From "+user+".\n> Command running complete: No allow empty commands.")
-#    elif command.strip().lower().startswith("dir"):
-#        args = command.strip().split(maxsplit=1)
-#        path = args[1] if len(args) > 1 else "."
-#        file_module.file_dir(path)
-#    elif command.strip().lower().startswith("ls"):
-#        args = command.strip().split(maxsplit=1)
-#        path = args[1] if len(args) > 1 else "."
-#        file_module.file_ls(path)
+    elif ("pc dir" in command or "pc ls" in command) and "/command:yes" in command:
+        match=re.search(r"/value:\{(.*?)\}", command)
+        if match:
+            value=match.group(1).strip('"')
+            if value=="input":
+                if lang=="zh_cn":
+                    value=input("} 执行了 " + command + "：来自 " + user + " 账户。\n> 命令成功完成：要求用户输入自定义内容。\n> 命令行要求定义value的值。\n< ")
+                else:
+                    value=input('} Running command "' + command + '": From ' + user + '.\n> Command running complete: Ask the user to enter custom content.\n> The command line requires the definition of the "value".\n< ')
+            base_dir=os.path.dirname(os.path.abspath(__file__))
+            if value.startswith("/") or value.startswith("\\"):
+                abs_path=os.path.abspath(os.path.join(base_dir, ".." + value.replace("/", os.sep)))
+            else:
+                abs_path=os.path.abspath(os.path.join(base_dir, value))
+            if os.path.exists(abs_path):
+                if os.path.isfile(abs_path):
+                    size=os.path.getsize(abs_path)
+                    if lang=="zh_cn":
+                        print(f"> {os.path.basename(abs_path)}，位于{os.path.dirname(abs_path)}，大小 {size} 字节")
+                    else:
+                        print(f"> {os.path.basename(abs_path)} is located in {os.path.dirname(abs_path)}, size {size} bytes")
+                elif os.path.isdir(abs_path):
+                    files=os.listdir(abs_path)
+                    maxlen=max((len(f) for f in files), default=0)
+                    if lang=="zh_cn":
+                        print(f"> {os.path.basename(abs_path)}，位于{os.path.dirname(abs_path)}，包含 {len(files)} 个项目：")
+                        for f in files:
+                            f_path=os.path.join(abs_path, f)
+                            if os.path.isdir(f_path):
+                                print(f"\t[目录]\t{f.ljust(maxlen)}")
+                            else:
+                                fsize=os.path.getsize(f_path)
+                                print(f"\t[文件]\t{f.ljust(maxlen)}\t{fsize} 字节")
+                    else:
+                        print(f"> {os.path.basename(abs_path)} is located in {os.path.dirname(abs_path)}, contains {len(files)} items:")
+                        for f in files:
+                            f_path=os.path.join(abs_path, f)
+                            if os.path.isdir(f_path):
+                                print(f"\t[DIR]\t{f.ljust(maxlen)}")
+                            else:
+                                fsize=os.path.getsize(f_path)
+                                print(f"\t[FILE]\t{f.ljust(maxlen)}\t{fsize} bytes")
+                else:
+                    if lang=="zh_cn":
+                        print(f"> 未知类型：{abs_path}")
+                    else:
+                        print(f"> Unknown type: {abs_path}")
+            else:
+                if lang=="zh_cn":
+                    print(f"> 未找到：{abs_path}")
+                else:
+                    print(f"> {abs_path} is not found.")
+        else:
+            print("> 缺少 /value:{...} 参数")
+    elif "dir" in command and "/command:yes" in command:
+        args=command.strip().split(maxsplit=1)
+        path=args[1] if len(args) > 1 else "."
+        result=file_module.file_dir(path)
+        if result["result"]:
+            print(result["text"])
+        else:
+            print(f"dir error: {result['text']}")
+    elif "ls" in command and "/command:yes" in command:
+        args=command.strip().split(maxsplit=1)
+        path=args[1] if len(args) > 1 else "."
+        result=file_module.file_ls(path)
+        if result["result"]:
+            print(result["text"])
+        else:
+            print(f"ls error: {result['text']}")
     elif ("pc install" in command) and ("/command:yes" in command):
         if '/value:{"ubuntu"}' in command:
             git.install("ubuntu")

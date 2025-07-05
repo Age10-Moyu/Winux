@@ -15,6 +15,7 @@ class about:
     shared = "Shared functions and utilities for the program"
     restart = "Just a simple script to restart Winux"
     notepad = "A windows-style notepad, use tkinter"
+    file = "Like commands 'dir' and 'ls'"
 
 @staticmethod
 def help(func=None,type="get"):
@@ -38,7 +39,9 @@ def help(func=None,type="get"):
         elif func=="restart":
             return "[<class:restart.{self}>,<group:script>]\nHelp lib: script restart\nMethods:\n    Externality: not support\n    Interior: use by\n        import restart\nAttribute:\n    Class: restart.{self}\n    Group: script"
         elif func=="notepad":
-            return "[<class:notepad.Notepad>,<group:program>]\nHelp lib: program notepad\nMethods:\n    Externality: use by\n        /notepad.py -m --without-dynamic\n    or\n        /notepad.py -m -wd\n    Interior: use by\n        dy=True\n        notepad==True\n        import notepad\nAttribute:\n   Class: notepad.{self.Notepad}\n   Group: program"
+            return "[<class:notepad.Notepad>,<group:program>]\nHelp lib: program notepad\nMethods:\n    Externality: use by\n        /notepad.py -m --without-dynamic\n    or\n        /notepad.py -m -wd\n    Interior: use by\n        dy=True\n        notepad==True\n        import notepad\nAttribute:\n    Class: notepad.{self.Notepad}\n    Group: program"
+        elif func=="file":
+            return "[<class:file.{self}>,<group:script>]\nHelp lib: script file\nMethods:\n    Externality: not support\n    Interior: not support\nAttribute:\n    Class: file.{self.file_[dir|ls]}\n    Group: script"
         else:
             raise TypeError(f"[<error:'not found [func] {func}'>]\nHelp lib: something was error\nUse by\n    import special\n    special.help(func=\"[\n        __init__ / __main__ / kl / web / shell / git / special / shared / restart\n    ]\",type=\"[\n        get / print\n    ]\")")
     elif type=="print":
@@ -66,7 +69,9 @@ def help(func=None,type="get"):
         elif func=="restart":
             print("[<class:restart.{self}>,<group:script>]\nHelp lib: script restart\nMethods:\n    Externality: not support\n    Interior: use by\n        import restart\nAttribute:\n    Class: restart.{self}\n    Group: script")
         elif func=="notepad":
-            print("[<class:notepad.Notepad>,<group:program>]\nHelp lib: program notepad\nMethods:\n    Externality: use by\n        /notepad.py -m --without-dynamic\n    or\n        /notepad.py -m -wd\n    Interior: use by\n        dy=True\n        notepad==True\n        import notepad\nAttribute:\n   Class: notepad.{self.Notepad}\n   Group: program")
+            print("[<class:notepad.Notepad>,<group:program>]\nHelp lib: program notepad\nMethods:\n    Externality: use by\n        /notepad.py -m --without-dynamic\n    or\n        /notepad.py -m -wd\n    Interior: use by\n        dy=True\n        notepad==True\n        import notepad\nAttribute:\n    Class: notepad.{self.Notepad}\n    Group: program")
+        elif func=="file":
+            print("[<class:file.{self}>,<group:script>]\nHelp lib: script file\nMethods:\n    Externality: not support\n    Interior: not support\nAttribute:\n    Class: file.{self.file_[dir|ls]}\n    Group: script")
         else:
             raise TypeError(f"[<error:'not found [func] {func}'>]\nHelp lib: something was error\nUse by\n    import special\n    special.help(func=\"[\n        __init__ / __main__ / kl / web / shell / git / special / shared / restart\n    ]\",type=\"[\n        get / print\n    ]\")")
     else:
@@ -92,4 +97,4 @@ if __name__=="__main__":
     else:
         print("} Using external output.\n> This program or script has no output symbol configured, will replace by default profile.\n")
         print("> Usage: python special.py -m help [function_name]")
-        print("> Available function names: __init__, __main__, kl, web, shell, git, special, shared, restart, notepad")
+        print("> Available function names: __init__, __main__, kl, web, shell, git, special, shared, restart, notepad, file")
