@@ -1,11 +1,11 @@
-import os,sys
+﻿import os,sys
 from shared import lang_import
 from shared import command_import
 from shared import user_import
 import shared
 from time import sleep
 from random import randint,choice,seed
-from special import git
+from special import git # type: ignore
 
 lang=lang_import()
 user=user_import()
@@ -89,15 +89,18 @@ support=["ubuntu","arch","dm","lightdm","notepad"]
 def install(package=None,use_uac=True):
     if os.name=="nt" and os.path.normcase(os.path.basename(sys.executable))=="pythonw.exe":
         if lang=="zh_cn":
-            print("} 执行了 "+command+"：来自 "+user+" 账户。\n> 命令成功完成：命令成功完成。")
+            print("} 执行了 "+command+"：来自 "+user+" 账户。\n> 命令成功完成：命令成功完成。") # type: ignore
         else:
-            print("} Running command "+command+": From "+user+".\n> Command running complete: Command running complete.")
+            print("} Running command "+command+": From "+user+".\n> Command running complete: Command running complete.") # type: ignore
         print("> ERROR: Cannot install any packages in pythonw.exe.\n> Try to running in python.exe?")
     else:
-        del shared.command_import,command
+        del shared.command_import
         from shared import command_import
         command=command_import()
-        if "--rootin" in command or "--system" in command or not use_uac:
+        del command_import
+        from shared import command_import
+        command=command_import()
+        if ("sudo" in command and (("--rootin" in command) or ("--system" in command))) or (not use_uac):
             if package=="ubuntu":
                 if lang=="zh_cn":
                     input("> 请求的操作需要提升。\n")
@@ -264,7 +267,7 @@ def install(package=None,use_uac=True):
                         print("} 执行了 "+command+"：密码不正确：来自 "+user+" 账户。"+"\n> 命令成功完成：权限不足。")
                     else:
                         print("} Running command "+command+": Password is incorrect: From "+user+"."+"\n> Command running complete: InsufficientPermissionsError.")
-            elif package==git.empty("install"):
+            elif package==git.empty("install"): # type: ignore
                 if lang=="zh_cn":
                     print("} 执行了 "+command+"：来自 "+user+" 账户。\n> 命令成功完成：命令成功完成。\n> ERROR: need compact 'value' but there have not.")
                 else:

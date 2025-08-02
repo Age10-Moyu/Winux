@@ -1,7 +1,9 @@
+*/__pycache/
 __pycache__/
 .java/
 .venv/
 .vscode/
+libs/__pycache__/
 libs/api.py
 resource/public/innosetup/
 resource/home/user/
