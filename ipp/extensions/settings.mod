@@ -1,3 +1,4 @@
+// JSON basic
 {
     "name": "IPP Settings",
     "description": "Stardard settings for IPP",
