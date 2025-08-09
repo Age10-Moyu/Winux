@@ -1,4 +1,5 @@
 ﻿import os,sys
+from hashlib import sha256 as hash
 from shared import lang_import
 from shared import command_import
 from shared import user_import
@@ -108,7 +109,7 @@ def install(package=None,use_uac=True):
                 else:
                     input("> The requested operation requires elevation.\n")
                     uac=input("> Do you want to allow the following program to make changes to this computer?\n> If you want to continue, please enter your Administrator password.\n< ")
-                if uac=="zyz20120418":
+                if hash(uac.encode("utf-8"))=="6f8c43dfc850e125fe7345d24a04c83edad33604bc3fa6f2b868cd8cee80dbb7":
                     if lang=="zh_cn":
                         print("} 执行了 "+command+"：来自 "+user+" 账户。\n> 命令成功完成：命令成功完成。\n> 开始安装：Ubuntu")
                     else:
@@ -137,7 +138,7 @@ def install(package=None,use_uac=True):
                 else:
                     input("> The requested operation requires elevation.\n")
                     uac=input("> Do you want to allow the following program to make changes to this computer?\n> If you want to continue, please enter your Administrator password.\n< ")
-                if uac=="zyz20120418":
+                if hash(uac.encode("utf-8"))=="6f8c43dfc850e125fe7345d24a04c83edad33604bc3fa6f2b868cd8cee80dbb7":
                     if lang=="zh_cn":
                         print("} 执行了 "+command+"：来自 "+user+" 账户。\n> 命令成功完成：命令成功完成。\n> 开始安装：Arch Linux")
                     else:
@@ -171,7 +172,7 @@ def install(package=None,use_uac=True):
                 else:
                     input("> The requested operation requires elevation.\n")
                     uac=input("> Do you want to allow the following program to make changes to this computer?\n> If you want to continue, please enter your Administrator password.\n< ")
-                if uac=="zyz20120418":
+                if hash(uac.encode("utf-8"))=="6f8c43dfc850e125fe7345d24a04c83edad33604bc3fa6f2b868cd8cee80dbb7":
                     if lang=="zh_cn":
                         print("} 执行了 "+command+"：来自 "+user+" 账户。\n> 命令成功完成：命令成功完成。\n> 开始安装：标准渲染器")
                     else:
@@ -206,7 +207,7 @@ def install(package=None,use_uac=True):
                 else:
                     input("> The requested operation requires elevation.\n")
                     uac=input("> Do you want to allow the following program to make changes to this computer?\n> If you want to continue, please enter your Administrator password.\n< ")
-                if uac=="zyz20120418":
+                if hash(uac.encode("utf-8"))=="6f8c43dfc850e125fe7345d24a04c83edad33604bc3fa6f2b868cd8cee80dbb7":
                     if lang=="zh_cn":
                         print("} 执行了 "+command+"：来自 "+user+" 账户。\n> 命令成功完成：命令成功完成。\n> 开始安装：Light渲染器")
                     else:
@@ -241,7 +242,7 @@ def install(package=None,use_uac=True):
                 else:
                     input("> The requested operation requires elevation.\n")
                     uac=input("> Do you want to allow the following program to make changes to this computer?\n> If you want to continue, please enter your Administrator password.\n< ")
-                if uac=="zyz20120418":
+                if hash(uac.encode("utf-8"))=="6f8c43dfc850e125fe7345d24a04c83edad33604bc3fa6f2b868cd8cee80dbb7":
                     if lang=="zh_cn":
                         print("} 执行了 "+command+"：来自 "+user+" 账户。\n> 命令成功完成：命令成功完成。\n> 开始安装：记事本")
                     else:
@@ -272,6 +273,18 @@ def install(package=None,use_uac=True):
                     print("} 执行了 "+command+"：来自 "+user+" 账户。\n> 命令成功完成：命令成功完成。\n> ERROR: need compact 'value' but there have not.")
                 else:
                     print("} Running command "+command+": From "+user+".\n> Command running complete: command running complete.\n> ERROR: need compact 'value' but there have not.")
+            elif package is None:
+                if lang=="zh_cn":
+                    print("} 执行了 "+command+"：来自 "+user+" 账户。\n> 命令成功完成：命令成功完成。\n> ERROR: need compact 'value' but there have not.")
+                else:
+                    print("} Running command "+command+": From "+user+".\n> Command running complete: command running complete.\n> ERROR: need compact 'value' but there have not.")
+                return
+            elif package not in support:
+                if lang=="zh_cn":
+                    print("} 执行了 "+command+"：来自 "+user+" 账户。\n> 命令成功完成：命令成功完成。\n> Cannot find the selected Standard Package.")
+                else:
+                    print("} Running command "+command+": From "+user+".\n> Command running complete: command running complete.\n> Cannot find the selected Standard Package.")
+                return
             else:
                 if lang=="zh_cn":
                     print("} 执行了 "+command+"：来自 "+user+" 账户。\n> 命令成功完成：命令成功完成。\n> Cannot find the selected Standard Package.")
