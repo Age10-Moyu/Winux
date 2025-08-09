@@ -1,6 +1,8 @@
-*/__pycache/
+*/__pycache__/
 __pycache__/
+.github/
 .java/
+.project/
 .venv/
 .vscode/
 libs/__pycache__/
@@ -17,4 +19,5 @@ resource/special/text/uninist.*
 resource/special/text/uninist_*.*
 sandbox/
 .DS_Store
+setup.py
 todo.py
