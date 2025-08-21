@@ -1,7 +1,6 @@
-// JSON basic
 {
     "name": "IPP Settings",
-    "description": "Stardard settings for IPP",
+    "description": "Standard settings for IPP",
     "use_in": [
         "gdstu.ipp",
         "gdstu.update_log"
@@ -17,10 +16,13 @@
         "apps": [
             "/__main__.py",
             "/__init__.py",
+            "/setup.py"
         ],
         "dirs": [],
         "git": true,
+        "response": "/.git/",
         "gitignore": true,
+        ".gitfile": "/.gitignore",
         "enable_api": true,
         "api": false,
         // Cannot show the API key with {"gitignore": true}
