@@ -3,6 +3,7 @@ __pycache__/
 .github/
 .java/
 .project/
+.ssh/
 .venv/
 .vscode/
 libs/__pycache__/
