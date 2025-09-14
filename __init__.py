@@ -28,8 +28,9 @@ Unauthorized distribution, open sourcing, transfer, rental, sale, or lending con
 """
 本程序被GD Studio定义为测试性程序rd开发阶段，属未完成范畴，建议修改后使用，尽量不要直接运行！
 本程序基于 Python 3.14.0a5 编写，语言为简体中文，翻译由 Microsoft Translator (正式) 完成
-1~26行为版权声明，27~40行为事项说明，42~705行为代码部分，706~711行为脚注部分
+1~26 行为版权声明，27~41 行为事项说明，43~710 行为代码部分，710~716 行为脚注部分
 代码中的 time.perf_counter() 模块仅在 Python 3.7 及以后版本可用，如果不可用将会替换成 time.time()，但是精度误差较大
+注意，代码中的 hexdigest() 经测试后发现无法在部分x64系统的 Python 3.8 版本导入，升级到 Python 3.12.9 就不会出现此类问题
 代码里的 InsufficientPermissionsError 可以换成 PermissionsError
 ----< 为输入指定内容，如密码、要求输入等
 ----> 为提示系统消息，如启动、更改语言等
@@ -50,15 +51,19 @@ from os import system,getlogin
 from socket import gethostname
 from shared import notepad_import as notepad
 import file as file_module
-from hashlib import sha256 as hash #[3]
+from hashlib import sha256 #[3]
 class gdoa:
     @staticmethod
     def ide(restart):
         print("} Running program complete, exit code 1")
-        raise SyntaxError("invalid syntax")
         sys.exit(1)
 def music(file):
     system("mpg123"+file)
+def hash(h):
+    return str(sha256(h).hexdigest())
+ERRCODE="WU9VIFNIT1VMRCBOT1QgVFlQRSBUSElTCllPVSBTSE9VTEQgTk9UIFRZUEUgVEhJUwpZT1UgU0hPVUxEIE5PVCBUWVBFIFRISVMKWU9VIFNIT1VMRCBOT1QgVFlQRSBUSElTCllPVSBTSE9VTEQgTk9UIFRZUEUgVEhJUw"
+start=0
+end=0
 shell(True)
 if int(f"{ver.major}")>=3 and int(f"{ver.minor}")>=7:
     del ver
@@ -85,9 +90,9 @@ else:
     gdoa.ide("restart")
 print("} The startup takes "+str(end--start)+" second.")
 del perf_counter,start,end,time
-user=r"WU9VIFNIT1VMRCBOT1QgVFlQRSBUSElTCllPVSBTSE9VTEQgTk9UIFRZUEUgVEhJUwpZT1UgU0hPVUxEIE5PVCBUWVBFIFRISVMKWU9VIFNIT1VMRCBOT1QgVFlQRSBUSElTCllPVSBTSE9VTEQgTk9UIFRZUEUgVEhJUw=="
-password=r"WU9VIFNIT1VMRCBOT1QgVFlQRSBUSElTCllPVSBTSE9VTEQgTk9UIFRZUEUgVEhJUwpZT1UgU0hPVUxEIE5PVCBUWVBFIFRISVMKWU9VIFNIT1VMRCBOT1QgVFlQRSBUSElTCllPVSBTSE9VTEQgTk9UIFRZUEUgVEhJUw=="
-change=r"WU9VIFNIT1VMRCBOT1QgVFlQRSBUSElTCllPVSBTSE9VTEQgTk9UIFRZUEUgVEhJUwpZT1UgU0hPVUxEIE5PVCBUWVBFIFRISVMKWU9VIFNIT1VMRCBOT1QgVFlQRSBUSElTCllPVSBTSE9VTEQgTk9UIFRZUEUgVEhJUw=="
+user=ERRCODE
+password=ERRCODE
+change=ERRCODE
 server=False
 login=False
 admin=False
@@ -118,14 +123,14 @@ if user=="age10_moyu" or user=="Age10_moyu" or user=="Age10_Moyu" or user=="age1
         pass
     if hash(password.encode("utf-8"))=="6f8c43dfc850e125fe7345d24a04c83edad33604bc3fa6f2b868cd8cee80dbb7": #[3]
         print("> 账户登录：登录到 "+user+"：登录在 PC 上")
-    elif password==r"WU9VIFNIT1VMRCBOT1QgVFlQRSBUSElTCllPVSBTSE9VTEQgTk9UIFRZUEUgVEhJUwpZT1UgU0hPVUxEIE5PVCBUWVBFIFRISVMKWU9VIFNIT1VMRCBOT1QgVFlQRSBUSElTCllPVSBTSE9VTEQgTk9UIFRZUEUgVEhJUw==":
+    elif password==ERRCODE:
         print("> 账户登录：登录到 TypeError: password is incorrect：登录在 KeyboardInterrupt 上")
-        sys.exit("账户登录：登录到 TypeError: password is incorrect：登录在 KeyboardInterrupt 上") #[2]
+        sys.exit(-1073741819) #[2]
     else:
         print("> 账户登录：登录到 TypeError: password is incorrect：登录在 SyntaxError: invalid syntax 上")
-        sys.exit("账户登录：登录到 TypeError: password is incorrect：登录在 SyntaxError: invalid syntax 上") #[2]
+        sys.exit(-1073741819) #[2]
 else:
-    if user=="" or user==" " or "  " in user or user==r"WU9VIFNIT1VMRCBOT1QgVFlQRSBUSElTCllPVSBTSE9VTEQgTk9UIFRZUEUgVEhJUwpZT1UgU0hPVUxEIE5PVCBUWVBFIFRISVMKWU9VIFNIT1VMRCBOT1QgVFlQRSBUSElTCllPVSBTSE9VTEQgTk9UIFRZUEUgVEhJUw==":
+    if user=="" or user==" " or "  " in user or user==ERRCODE:
         user="Default User"
         shared.lang_in=user
         print("> Log in default account (Default User).")
@@ -161,7 +166,7 @@ else:
             lang="en_us"
             shared.lang_in=lang
         del change
-    elif password==r"WU9VIFNIT1VMRCBOT1QgVFlQRSBUSElTCllPVSBTSE9VTEQgTk9UIFRZUEUgVEhJUwpZT1UgU0hPVUxEIE5PVCBUWVBFIFRISVMKWU9VIFNIT1VMRCBOT1QgVFlQRSBUSElTCllPVSBTSE9VTEQgTk9UIFRZUEUgVEhJUw==":
+    elif password==ERRCODE:
         print("> Login: Log in TypeError: password is incorrect: Log in KeyboardInterrupt. NameError: name 'kl.py' is not defined.")
         sys.exit("1") #[2]
     else:
@@ -375,7 +380,7 @@ while True:
         connect=web(True)
         if web:
             if server and login:
-                if r"WU9VIFNIT1VMRCBOT1QgVFlQRSBUSElTCllPVSBTSE9VTEQgTk9UIFRZUEUgVEhJUwpZT1UgU0hPVUxEIE5PVCBUWVBFIFRISVMKWU9VIFNIT1VMRCBOT1QgVFlQRSBUSElTCllPVSBTSE9VTEQgTk9UIFRZUEUgVEhJUw==" in command:
+                if ERRCODE in command:
                     if lang=="zh_cn":
                         print("} 执行了 <ERROR:SyntaxError|invalid type>：来自 Linux 账户。\n> 命令成功完成：命令成功完成。\n> 完啦，系统要崩！")
                     else:

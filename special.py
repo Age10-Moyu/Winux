@@ -1,4 +1,5 @@
 import shared,sys
+from time import sleep
 
 lang=shared.lang_import()
 user=shared.user_import()
@@ -86,6 +87,22 @@ class git:
             return "[<class:special.git>,<error:'not rich function'>]"
         else:
             return f"[<class:special.git>,<function:{func}>,<error:'not found this function'>]"
+        
+def empty(times):
+    for time in times:
+        sleep(0)
+
+class ascii:
+    red="\033[31m"
+    blue="\033[34m"
+    green="\033[32m"
+    yellow="\033[33m"
+    clay="\033[36m"
+    white="\033[37m"
+    nc="\033[0m"
+    bold="\033[1m"
+    underline="\033[4m"
+    other="Waiting for more"
 
 if __name__=="__main__":
     if len(sys.argv)>=3 and sys.argv[1]=="-m" and sys.argv[2]=="help":
