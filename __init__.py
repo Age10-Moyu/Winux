@@ -116,7 +116,7 @@ if user=="age10_moyu" or user=="Age10_moyu" or user=="Age10_Moyu" or user=="age1
         password=input("> 输入密码登录：\n< ")
     except KeyboardInterrupt:
         pass
-    if hash(password.encode("utf-8"))=="6f8c43dfc850e125fe7345d24a04c83edad33604bc3fa6f2b868cd8cee80dbb7":
+    if hash(password.encode("utf-8")).hexdigest()=="6f8c43dfc850e125fe7345d24a04c83edad33604bc3fa6f2b868cd8cee80dbb7":
         print("> 账户登录：登录到 "+user+"：登录在 PC 上")
     elif password==r"WU9VIFNIT1VMRCBOT1QgVFlQRSBUSElTCllPVSBTSE9VTEQgTk9UIFRZUEUgVEhJUwpZT1UgU0hPVUxEIE5PVCBUWVBFIFRISVMKWU9VIFNIT1VMRCBOT1QgVFlQRSBUSElTCllPVSBTSE9VTEQgTk9UIFRZUEUgVEhJUw==":
         print("> 账户登录：登录到 TypeError: password is incorrect：登录在 KeyboardInterrupt 上")
@@ -603,7 +603,7 @@ while True:
             input("> 请求的操作需要提升。\n")
             sleep(0)
             uac=input("> 你要允许此应用对你的设备进行更改吗？\n> 如果要继续，请输入管理员密码。\n< ")
-            if hash(uac.encode("utf-8"))=="6f8c43dfc850e125fe7345d24a04c83edad33604bc3fa6f2b868cd8cee80dbb7":
+            if hash(uac.encode("utf-8")).hexdigest()=="6f8c43dfc850e125fe7345d24a04c83edad33604bc3fa6f2b868cd8cee80dbb7":
                 if r"/value:{input}" in command:
                     if lang=="zh_cn":
                         value=input("} 执行了 "+command+"：来自 "+user+" 账户。\n> 命令成功完成：要求用户输入自定义内容。\n> 命令行要求定义value的值。\n< ")
@@ -625,7 +625,7 @@ while True:
             input("> The requested operation requires elevation.\n")
             sleep(0)
             uac=input("> Do you want to allow the following program to make changes to this computer?\n> If you want to continue, please enter your Administrator password.\n< ")
-            if hash(uac.encode("utf-8"))=="6f8c43dfc850e125fe7345d24a04c83edad33604bc3fa6f2b868cd8cee80dbb7":
+            if hash(uac.encode("utf-8")).hexdigest()=="6f8c43dfc850e125fe7345d24a04c83edad33604bc3fa6f2b868cd8cee80dbb7":
                 print("} Running command "+command+": From "+user+".\n> Command running complete: Command running complete.")
             else:
                 print("} Running command "+command+": Password is incorrect: From "+user+"."+"\n> Command running complete: InsufficientPermissionsError.")
@@ -654,7 +654,7 @@ while True:
                 input("> 请求的操作需要提升。\n")
                 sleep(0)
                 uac=input("> 你要允许此应用对你的设备进行更改吗？\n> 如果要继续，请输入管理员密码。\n< ")
-                if hash(uac.encode("utf-8"))=="6f8c43dfc850e125fe7345d24a04c83edad33604bc3fa6f2b868cd8cee80dbb7":
+                if hash(uac.encode("utf-8")).hexdigest()=="6f8c43dfc850e125fe7345d24a04c83edad33604bc3fa6f2b868cd8cee80dbb7":
                     if lang=="zh_cn":
                         print("} 执行了 "+command+"：来自 "+user+" 账户。\n> 命令成功完成：命令成功完成。")
                     else:
@@ -665,7 +665,7 @@ while True:
                 input("> The requested operation requires elevation.\n")
                 sleep(0)
                 uac=input("> Do you want to allow the following program to make changes to this computer?\n> If you want to continue, please enter your Administrator password.\n< ")
-                if hash(uac.encode("utf-8"))=="6f8c43dfc850e125fe7345d24a04c83edad33604bc3fa6f2b868cd8cee80dbb7":
+                if hash(uac.encode("utf-8")).hexdigest()=="6f8c43dfc850e125fe7345d24a04c83edad33604bc3fa6f2b868cd8cee80dbb7":
                     print("} Running command "+command+": From "+user+".\n> Command running complete: Command running complete.")
                 else:
                     print("} Running command "+command+": Password is incorrect: From "+user+"."+"\n> Command running complete: InsufficientPermissionsError.")
@@ -681,7 +681,7 @@ while True:
                 input("> 请求的操作需要提升。\n")
                 sleep(0)
                 uac=input("> 你要允许此应用对你的设备进行更改吗？\n> 如果要继续，请输入管理员密码。\n< ")
-                if hash(uac.encode("utf-8"))=="6f8c43dfc850e125fe7345d24a04c83edad33604bc3fa6f2b868cd8cee80dbb7":
+                if hash(uac.encode("utf-8")).hexdigest()=="6f8c43dfc850e125fe7345d24a04c83edad33604bc3fa6f2b868cd8cee80dbb7":
                     if lang=="zh_cn":
                         print("} 执行了 "+command+"：来自 "+user+" 账户。\n> 命令成功完成：命令成功完成。")
                     else:
@@ -692,7 +692,7 @@ while True:
                 input("> The requested operation requires elevation.\n")
                 sleep(0)
                 uac=input("> Do you want to allow the following program to make changes to this computer?\n> If you want to continue, please enter your Administrator password.\n< ")
-                if hash(uac.encode("utf-8"))=="6f8c43dfc850e125fe7345d24a04c83edad33604bc3fa6f2b868cd8cee80dbb7":
+                if hash(uac.encode("utf-8")).hexdigest()=="6f8c43dfc850e125fe7345d24a04c83edad33604bc3fa6f2b868cd8cee80dbb7":
                     print("} Running command "+command+": From "+user+".\n> Command running complete: Command running complete.")
                 else:
                     print("} Running command "+command+": Password is incorrect: From "+user+"."+"\n> Command running complete: InsufficientPermissionsError.")
