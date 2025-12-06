@@ -1,49 +1,65 @@
 ========================
-GD Restricted Collaboration License (GD-RCL) v1.0
+GD Restricted Collaboration License (GD-RCL) v1.7
 ========================
 Chinese (Simplified) Version
 ------------------------
-1. 授权范围
-•  允许个人或团队内部使用、测试、讨论源代码。
-•  允许基于项目需求的非公开性修改与衍生开发。
-•  允许向GD Studio提交改进建议或代码贡献（贡献内容自动归属 GD Studio）。
-2. 禁止行为
-•  禁止任何形式的分发、公开传播（包括但不限于代码 / 二进制文件 / 文档的共享、托管至公共仓库、出租、出售、出借、质押、捆绑销售或商业化利用）。
-•  禁止向非授权方展示、演示或公开讨论技术细节。
-•  禁止移除/篡改源代码中的版权声明或协议文件。
-3. 权利归属
-•  所有知识产权（包括修改后的版本）永久归属于 GD Studio 及其全球附属机构。
-•  GD Studio 保留随时终止授权、追究违约责任及调整协议条款的权利。
-4. 通用条款
-•  本协议自动覆盖所有衍生代码，无需额外声明。
-•  争议管辖地默认以 GD Studio in China 所在地法律为准。
-5.  其它事项
-•  GD Studio 永远不会提供此程序的任何形式的公开许可，更不会向任何外部团队公开提供任何许可协议。若您或您的团队收到了
-      •  声称来自 GD Studio 及其旗下任何团体或成员发出的关于此程序的公开许可，
-      •  任何您所属团队之外的关于此程序的任何许可，
-   •  谨防被骗，并向 GD Studio 最高管理组成员举报。
+欢迎使用我工作室及其旗下产品（以下简称“产品”）。以下为此协议的被授权使用方（以下简称“我们”）及此产品的使用者（以下简称“您”或“你”）之间的一般协定。
+1、Legal
+    本协议可能有部分内容由机器或 AI 修正。
+    本文部分内容由 Bedrock Technology and Gaming Team 简体中文管理组翻译，结果不一定 100% 准确。
+    如有异议，请参阅 GD Studio 的相关声明。
+2、许可的范围
+    允许您或您的团队内部使用、测试、讨论本产品及其源代码。
+    允许基于正当需求对本产品的修改与衍生开发。
+    允许分发此产品已公开的维基或其它任何形式的帮助文档。
+    允许您对本产品提交改进建议或代码贡献。
+        您贡献的内容将自动归属至我们旗下。
+2、禁止的行为
+    禁止任何形式的分发、公开传播（包括但不限于对程序 / 修改进行共享、托管、出租、出售、出借、质押、捆绑销售或商业化利用）。 
+        这并不意味着我们不能对此产品进行任何商业行为。
+    除了您的团队以外，禁止向他人展示、演示或公开讨论此产品的相关内容。
+    禁止移除 / 篡改源代码中的版权声明或协议文件。
+3、版权相关
+    本产品及其相关内容（包括但不限于源代码、官方维基等）所有权属于我们。
+    如果使用此协议，本产品的上述内容的所有权应该同属于此协议的被授权使用方与 GD Studio。
+    GD Studio 保留随时终止授权、追究违约责任及调整协议条款的权利。
+4、通用条款
+    本协议文件的任何内容 GD Studio 及旗下部门均有权自主修改并运用于我工作室旗下之产品，且不做任何声明。
+        部分团队也可在 GD Studio 的指导下对部分条款进行有限修改。
+        这并不意味着您也拥有相同权力。
+    除非特殊声明，否则允许的衍生内容也将使用本协议。
+    如有存在法律方面的争议，以 GD Studio 的归属地法律为准。
 ========================
 English (US) Version
 ------------------------
-1. Scope of Authorization
-• Permitted use, testing, and discussion of source code internally by individuals or teams.
-  • Allow non-public modifications and derivative development for project requirements.
-  • Permit submission of improvement suggestions or code contributions to GD Studio (all contributions automatically become property of GD Studio).
-2. Prohibited Actions
-• Any form of distribution or public dissemination is forbidden, including but not limited to sharing code/binaries/documentation, hosting on public repositories, leasing, selling, lending, pledging, bundling for sale, or commercial exploitation.
-  • Prohibit demonstrating, presenting, or publicly discussing technical details with unauthorized parties.
-  • Removal/alteration of copyright notices or license documentation in source code is strictly prohibited.
-3. Ownership Rights
-• All intellectual property rights (including modified versions) shall remain permanently vested in GD Studio and its global affiliates.
-  • GD Studio reserves the right to terminate authorization, pursue breach penalties, and modify terms at any time.
-4. General Terms
-• This agreement automatically applies to all derivative code without requiring additional declarations.
-  • Jurisdiction for disputes shall default to the laws of GD Studio's location in China.
-5. Additional Provisions
-• GD Studio will never grant any form of public license for this program, nor provide licensing agreements to external teams.
-  • If you/your team receives:
-    • Alleged public licenses for this program claimed to originate from GD Studio or its subsidiaries/members,
-    • Any licensing offers from entities outside your authorized team regarding this program,
-  • Immediately treat these as fraudulent and report to the highest governance body of GD Studio.
+Welcome to use my studio and its products (hereinafter referred to as "products"). The following is a general agreement between ownership of the aforementioned content of this product (hereinafter referred to as "we") and the user of this product (hereinafter referred to as "you").
+1, Legal
+    This agreement may contain sections that have been revised by machine or AI.
+    Portions of this text were translated by the Bedrock Technology and Gaming Team English (International) Management Group; accuracy is not guaranteed to be 100%.
+    In case of any discrepancy, please refer to the relevant statements from GD Studio.
+2, Allowed Activities
+    You are permitted to use, test, and discuss this product and its source code internally within your team.
+    Modifications and derivative development of this product based on legitimate needs are permitted.
+    Distribution of this product's publicly available wikis or any other form of help documentation is permitted.
+    Submit improvement suggestions or code contributions for this product.
+        Any content you contribute will automatically become the property of our organization.
+3, Prohibited Activities
+    Any form of distribution or public dissemination is prohibited, including but not limited to sharing, hosting, leasing, selling, lending, pledging, bundling, or commercial exploitation of the program/modifications.
+        This does not mean that we cannot engage in any commercial activities with this product.
+    It is prohibited to demonstrate, present, or publicly discuss any related content of this product to anyone outside your team.
+    Removing or tampering with copyright notices or license files in the source code is prohibited.
+4, Copyright
+    Ownership of this product and its related content (including but not limited to source code, official wikis, etc.) belongs to us.
+    If this license is used, ownership of the aforementioned content of this product shall be jointly owned by the licensee under this agreement and GD Studio.
+    GD Studio reserves the right to terminate the authorization at any time, pursue liability for breach of contract, and adjust the terms of the agreement.
+5, General Terms
+    GD Studio and its departments reserve the right to independently modify any content of this agreement and apply it to products under my studio, without making any declarations.
+        Certain teams may also make limited modifications to some clauses under the guidance of GD Studio.
+        This does not imply that you hold the same rights.
+    Unless specifically stated otherwise, permitted derivative content shall also use this license.
+    In the event of any legal disputes, the laws of the jurisdiction where GD Studio is located shall prevail.
 ========================
-©  GD Studio. Licensed under GD-RCL.
+© 2025 GD Studio.
+Bedrock Technology and Gaming Team, IS Studio are owned by GD Studio in China.
+-----------------------
+Write by Age10_Moyu, at 28/8, 2025.

@@ -4,7 +4,7 @@ from shared import lang_import,command_import,user_import
 import shared
 from time import sleep
 from random import randint,choice,seed
-from special import git
+from special import git # type: ignore
 import special # type: ignore
 
 lang=lang_import()

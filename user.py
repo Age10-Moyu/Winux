@@ -56,7 +56,7 @@ def ensure_dir_exists(path):
 lang_path = "resource/home/user/lang.ini"
 ensure_dir_exists(lang_path)
 with open(lang_path, "w", encoding="utf-8") as f:
-    f.write(lang_import())
+    f.write("[LANG]\nglobal_lang = "+lang_import())
 
 account_path = "resource/home/user/account.json"
 ensure_dir_exists(account_path)

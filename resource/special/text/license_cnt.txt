@@ -1,0 +1,49 @@
+========================
+GD Restricted Collaboration License (GD-RCL) v1.0
+========================
+Chinese (Simplified) Version
+------------------------
+1. 授权范围
+•  允许个人或团队内部使用、测试、讨论源代码。
+•  允许基于项目需求的非公开性修改与衍生开发。
+•  允许向GD Studio提交改进建议或代码贡献（贡献内容自动归属 GD Studio）。
+2. 禁止行为
+•  禁止任何形式的分发、公开传播（包括但不限于代码 / 二进制文件 / 文档的共享、托管至公共仓库、出租、出售、出借、质押、捆绑销售或商业化利用）。
+•  禁止向非授权方展示、演示或公开讨论技术细节。
+•  禁止移除/篡改源代码中的版权声明或协议文件。
+3. 权利归属
+•  所有知识产权（包括修改后的版本）永久归属于 GD Studio 及其全球附属机构。
+•  GD Studio 保留随时终止授权、追究违约责任及调整协议条款的权利。
+4. 通用条款
+•  本协议自动覆盖所有衍生代码，无需额外声明。
+•  争议管辖地默认以 GD Studio in China 所在地法律为准。
+5.  其它事项
+•  GD Studio 永远不会提供此程序的任何形式的公开许可，更不会向任何外部团队公开提供任何许可协议。若您或您的团队收到了
+      •  声称来自 GD Studio 及其旗下任何团体或成员发出的关于此程序的公开许可，
+      •  任何您所属团队之外的关于此程序的任何许可，
+   •  谨防被骗，并向 GD Studio 最高管理组成员举报。
+========================
+English (US) Version
+------------------------
+1. Scope of Authorization
+• Permitted use, testing, and discussion of source code internally by individuals or teams.
+  • Allow non-public modifications and derivative development for project requirements.
+  • Permit submission of improvement suggestions or code contributions to GD Studio (all contributions automatically become property of GD Studio).
+2. Prohibited Actions
+• Any form of distribution or public dissemination is forbidden, including but not limited to sharing code/binaries/documentation, hosting on public repositories, leasing, selling, lending, pledging, bundling for sale, or commercial exploitation.
+  • Prohibit demonstrating, presenting, or publicly discussing technical details with unauthorized parties.
+  • Removal/alteration of copyright notices or license documentation in source code is strictly prohibited.
+3. Ownership Rights
+• All intellectual property rights (including modified versions) shall remain permanently vested in GD Studio and its global affiliates.
+  • GD Studio reserves the right to terminate authorization, pursue breach penalties, and modify terms at any time.
+4. General Terms
+• This agreement automatically applies to all derivative code without requiring additional declarations.
+  • Jurisdiction for disputes shall default to the laws of GD Studio's location in China.
+5. Additional Provisions
+• GD Studio will never grant any form of public license for this program, nor provide licensing agreements to external teams.
+  • If you/your team receives:
+    • Alleged public licenses for this program claimed to originate from GD Studio or its subsidiaries/members,
+    • Any licensing offers from entities outside your authorized team regarding this program,
+  • Immediately treat these as fraudulent and report to the highest governance body of GD Studio.
+========================
+©  GD Studio. Licensed under GD-RCL.

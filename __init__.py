@@ -43,7 +43,10 @@ Unauthorized distribution, open sourcing, transfer, rental, sale, or lending con
 #SourceCode
 import sys,special,git,shared,re,os
 from web import connect as web
-from shell import __init__ as shell
+from shell import(
+    __init__ as shell
+    clear
+)
 from sys import version_info as ver
 from time import sleep,perf_counter,time
 from random import randint,seed,choice
@@ -75,6 +78,7 @@ if ver:
 else:
     start=time()
 sleep(0)
+clear()
 print("========================= RESTART: Starting Winux =========================")
 seed()
 for i in range(randint(100000,10000000)):
@@ -122,6 +126,7 @@ if user=="age10_moyu" or user=="Age10_moyu" or user=="Age10_Moyu" or user=="age1
     except KeyboardInterrupt:
         pass
     if hash(password.encode("utf-8"))=="6f8c43dfc850e125fe7345d24a04c83edad33604bc3fa6f2b868cd8cee80dbb7": #[3]
+        clear()
         print("> 账户登录：登录到 "+user+"：登录在 PC 上")
     elif password==ERRCODE:
         print("> 账户登录：登录到 TypeError: password is incorrect：登录在 KeyboardInterrupt 上")
@@ -133,6 +138,7 @@ else:
     if user=="" or user==" " or "  " in user or user==ERRCODE:
         user="Default User"
         shared.lang_in=user
+        clear()
         print("> Log in default account (Default User).")
     lang="en_us"
     shared.lang_in=lang
@@ -144,6 +150,7 @@ else:
     except KeyboardInterrupt:
         pass
     if password=="winux-default-password":
+        clear()
         print("> Login: Log in "+user+": Log in PC. Not this user.")
         sleep(0)
         try:
@@ -173,7 +180,7 @@ else:
         print("> Login: Log in TypeError: password is incorrect: Log in SyntaxError: invalid syntax. NameError: name 'is_user_in_pc' is not defined.")
         sys.exit("1") #[2]
 if lang=="zh_cn":
-    print(r"""] sudo netpc is-open /value:no /active:yes from System /command:yes /active:no --system
+    for i in r"""] sudo netpc is-open /value:no /active:yes from System /command:yes /active:no --system
 > 请求的操作需要提升。
 
 > 你要允许此应用对你的设备进行更改吗？
@@ -204,9 +211,11 @@ if lang=="zh_cn":
 > 命令行要求定义value的值。
 < winux-default-password
 } 执行了 sudo netpc password /value:{input} /active:yes from System /command:yes /active:no --system：来自 System 账户。
-> 命令成功完成：命令成功完成。""")
+> 命令成功完成：命令成功完成。""":
+        print(i)
+        sleep(0)
 else:
-    print(r"""] sudo netpc is--open /value:no /active:yes from System /command:yes /active:no --system
+    for i in r"""] sudo netpc is--open /value:no /active:yes from System /command:yes /active:no --system
 > The requested operation requires elevation.
 
 > Do you want to allow the following program to make changes to this computer?
@@ -237,7 +246,11 @@ else:
 > The command line requires the definition of the "value".
 < winux-default-password
 } Running command sudo netpc maxpc /value:{input} /active:yes from System /command:yes /active:no --system: From System.
-> Command running complete: Command running complete.""")
+> Command running complete: Command running complete.""":
+        print(i)
+        sleep(0)
+sleep(0)
+clear()
 while True:
     try:
         command=input("] ")
@@ -589,6 +602,12 @@ while True:
             sleep(2)
             print()
             sys.exit(0)
+    elif "pc powershell" in command and "/command:yes" in command:
+        os.sys("py ./sandbox/powershell.py")
+        continue
+    elif ("pc clear" in command or "pc cls" in command or "powershell Clear-Host" in command) and "/command:yes" in command:
+        clear()
+        continue
     elif "sudo" in command and r" /active:yes " not in command:
         if lang=="zh_cn":
             print("} 执行了 "+command+r"：不能在没有/active₁时执行sudo：来自 "+user+" 账户。"+"\n> 命令成功完成：语法错误。")

@@ -21,3 +21,8 @@ def __init__(run=False):
         quit(1)
 # ctypes.windll.user32.MessageBoxW(None,"message","title",0x1000)
 # r"resuorce\shell\image\python.gif"
+def clear():
+    if sys.platform.startswith("win"):
+        os.system("cls")
+    else:
+        os.system("clear")

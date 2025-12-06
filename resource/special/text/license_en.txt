@@ -1,0 +1,25 @@
+========================
+GD Restricted Collaboration License (GD-RCL) v1.0
+========================
+1. Scope of Authorization
+• Permitted use, testing, and discussion of source code internally by individuals or teams.
+  • Allow non-public modifications and derivative development for project requirements.
+  • Permit submission of improvement suggestions or code contributions to GD Studio (all contributions automatically become property of GD Studio).
+2. Prohibited Actions
+• Any form of distribution or public dissemination is forbidden, including but not limited to sharing code/binaries/documentation, hosting on public repositories, leasing, selling, lending, pledging, bundling for sale, or commercial exploitation.
+  • Prohibit demonstrating, presenting, or publicly discussing technical details with unauthorized parties.
+  • Removal/alteration of copyright notices or license documentation in source code is strictly prohibited.
+3. Ownership Rights
+• All intellectual property rights (including modified versions) shall remain permanently vested in GD Studio and its global affiliates.
+  • GD Studio reserves the right to terminate authorization, pursue breach penalties, and modify terms at any time.
+4. General Terms
+• This agreement automatically applies to all derivative code without requiring additional declarations.
+  • Jurisdiction for disputes shall default to the laws of GD Studio's location in China.
+5. Additional Provisions
+• GD Studio will never grant any form of public license for this program, nor provide licensing agreements to external teams.
+  • If you/your team receives:
+    • Alleged public licenses for this program claimed to originate from GD Studio or its subsidiaries/members,
+    • Any licensing offers from entities outside your authorized team regarding this program,
+  • Immediately treat these as fraudulent and report to the highest governance body of GD Studio.
+========================
+©  GD Studio. Licensed under GD-RCL.

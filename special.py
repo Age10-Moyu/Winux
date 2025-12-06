@@ -79,7 +79,8 @@ def help(func=None,type="get"):
         raise TypeError(f"[<class:{func}."+"{self}'>,<error:'not found [type] {"+type+"}'>]\nHelp lib: something was error\nUse by\n    import special\n    special.help(func=\""+str(func)+"\",type=\"[\n        get / print\n    ]\")")
 
 class git:
-    @staticmethod
+    @property
+    # @staticmethod
     def empty(func=None):
         if func=="install":
             return "[<class:special.git>,<function:install>,<message:'poor for compacts'>]"
@@ -97,6 +98,7 @@ class ascii:
     blue="\033[34m"
     green="\033[32m"
     yellow="\033[33m"
+    purple="\033[35m"
     clay="\033[36m"
     white="\033[37m"
     nc="\033[0m"
